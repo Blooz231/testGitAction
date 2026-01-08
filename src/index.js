@@ -10,9 +10,11 @@ app.get('/', (req, res) => {
   res.json({ message: 'Hello World! CI/CD GitHub Actions fonctionne.' });
 });
 
-// Lancer le serveur
-app.listen(port, () => {
-  console.log(`Serveur en écoute sur http://localhost:${port}`);
-});
+// Lancer le serveur seulement si on est pas en test
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    console.log(`Serveur en écoute sur http://localhost:${port}`);
+  });
+}
 
 module.exports = app; // pour les tests

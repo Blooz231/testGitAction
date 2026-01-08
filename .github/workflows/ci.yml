@@ -32,3 +32,6 @@ jobs:
       # 5. Tests unitaires
       - name: Run tests
         run: npm test
+      - name: Run tests with test environment
+        run: NODE_ENV=test npm test
+
