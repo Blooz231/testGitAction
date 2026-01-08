@@ -31,4 +31,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: myuser/mon-projet:latest
+          tags: blooz/mon-projet:latest
